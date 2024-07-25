@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recette Carbonara</title>
+</head>
+<body>
+
+  <h1>Recette de Carbonara</h1>
+
+  <p id="ingredientCount"></p> 
+  <p>
+    <ol id="listeIngredient"></ol>                           
+  </p>
+  
+  <script>
+    // Liste des ingrédients stockée dans un tableau
+    const ingredients = ["Pâtes", "Oeuf", "Sel", "Poivre", "Lardon", "Oignon", "Parmesan"];
+    //const ingredients = [...] : Crée un tableau constant contenant les ingrédients nécessaires pour la recette des pâtes carbonara.
+
+
+    // Calculer le nombre d'ingrédients
+    const numberOfIngredients = ingredients.length;
+    //const numberOfIngredients = ingredients.length; : Stocke le nombre d'ingrédients dans la constante numberOfIngredients en utilisant la propriété length du tableau.
+
+    // Afficher le nombre d'ingrédients dans le paragraphe avec l'ID ingredientCount
+    document.getElementById('ingredientCount').innerText = "Le nombre d'ingrédients nécessaires pour la recette est : " + numberOfIngredients + ".";
+    //document.getElementById('ingredientCount') : Sélectionne l'élément HTML avec l'ID ingredientCount.
+    //innerText : Définit le texte de l'élément HTML sélectionné.
+    //"Le nombre d'ingrédients nécessaires pour la recette est : " + numberOfIngredients + "." : Concatène une chaîne de caractères avec la valeur de numberOfIngredients pour afficher le nombre d'ingrédients.
+    
+    // Trier les ingrédients par ordre alphabétique
+    ingredients.sort();
+
+    // Parcourir les ingrédients et les ajouter à la liste ordonnée
+    for (let i = 0 ; i < ingredients.length; i++) {
+      document.getElementById("listeIngredient").innerHTML += '<li>' + ingredients[i] + '</li>' + '<br>';
+ }
+    //boucle explication : for (let i = 0; i < ingredients.length; i++) : Une boucle for qui itère sur chaque élément du tableau ingredients.
+    //let i = 0 : Initialise la variable i à 0.
+    //i < ingredients.length : Continue la boucle tant que i est inférieur à la longueur du tableau ingredients.
+    //i++ : Incrémente i de 1 à chaque itération de la boucle.
+
+    //document.getElementById("listeIngredient").innerHTML += '<li>' + ingredients[i] + '</li>'; explications :
+    //document.getElementById("listeIngredient") : Sélectionne l'élément HTML avec l'ID listeIngredient.
+    //innerHTML += : Ajoute le code HTML spécifié à l'intérieur de l'élément sélectionné.
+    
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
